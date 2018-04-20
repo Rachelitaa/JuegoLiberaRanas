@@ -7,6 +7,8 @@ public class UVScroll : MonoBehaviour {
     public Vector2 speed;
     private void LateUpdate()
     {
-        GetComponent<Renderer>().material.mainTextureOffset = speed * Time.time;
+        //el background en vez de moverse solo se moverá cuando pulse las teclas del eje x
+        float h = Input.GetAxisRaw("Horizontal");
+        GetComponent<Renderer>().material.mainTextureOffset += h * speed;
     }
 }

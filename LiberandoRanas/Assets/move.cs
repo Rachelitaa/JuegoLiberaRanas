@@ -14,15 +14,13 @@ public class move : MonoBehaviour
     {
         //Get Input from Arrow Keys,AD,Gamepads
         float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-        GetComponent<Animator>().SetBool("saltando", v > 0);
 
         Vector2 dir = new Vector2(h, 0);
 
         GetComponent<Rigidbody2D>().velocity += dir.normalized * speed;
 
         //Control de que estemos tocando el suelo
-        if (transform.position.y > -5.60f)
+        if (transform.position.y > -6.20f)
         {
             grounded = false;
         }
@@ -35,9 +33,24 @@ public class move : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
         {
             GetComponent<Rigidbody2D>().velocity += Vector2.up * alturaSalto;
-            GetComponent<Animator>().SetBool("flying",true);
+            GetComponent<Animator>().SetBool("flying", true);
 
 
         }
     }
+
+        //si la rana colisiona con la serpiente se para el tiempo
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            //Colision con la serpiente = muerte
+            if (collision.gameObject.name == "Serpiente")
+            {
+                //Destruimos la rana
+                Destroy(this.gameObject);
+                Time.timeScale = 0;
+
+            }
+        }
+
+       
 }

@@ -282,6 +282,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ContinousVelocity.cs" />
     <Compile Include="Assets\move.cs" />
     <Compile Include="Assets\UVScroll.cs" />
   </ItemGroup>

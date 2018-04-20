@@ -342,6 +342,7 @@ MonoBehaviour:
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 1107075544487742342, guid: 721a7d176d6d28441b88b43a2e19f465, type: 2}
+    - {fileID: 1107138648667909318, guid: b202447bea209844497deb8530fd7556, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -351,6 +352,22 @@ MonoBehaviour:
       e11: 1
       e12: 0
       e13: 6
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
       e20: 0
       e21: 0
       e22: 1
@@ -499,18 +516,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Sprites
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Sprites
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\omer\Documents\Github\JuegoLiberaRanas\LiberandoRanas
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a270000
-    m_LastClickedID: 10106
+    m_SelectedIDs: aa270000
+    m_LastClickedID: 10154
     m_ExpandedIDs: 000000007a27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -570,18 +587,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000072290000d2280000662e00000e560000a6280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: move
-      m_OriginalName: move
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 1778
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
@@ -659,7 +676,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 1a11fbff9211fbffae12fbff7491fdffea91fdff0693fdff9efbffff00000000
+    m_ExpandedIDs: 3c19ffffc419ffffe01affff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -30,10 +30,10 @@ public class move : MonoBehaviour
         }
 
         //Tecla Up para saltar
-        if (Input.GetKeyDown(KeyCode.UpArrow) && grounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow)||(Input.GetButtonDown("Jump")) && grounded)
         {
             GetComponent<Rigidbody2D>().velocity += Vector2.up * alturaSalto;
-            GetComponent<Animator>().SetBool("flying", true);
+            GetComponent<Animator>().SetBool("saltando", true);
 
 
         }

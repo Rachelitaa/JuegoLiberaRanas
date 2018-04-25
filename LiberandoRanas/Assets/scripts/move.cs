@@ -9,6 +9,7 @@ public class move : MonoBehaviour
     public float alturaSalto = 5f;
     public bool grounded = true;
     public GameObject ranaMuerta;
+    int puntos;
 
 
     private void FixedUpdate()
@@ -20,17 +21,17 @@ public class move : MonoBehaviour
 
         GetComponent<Rigidbody2D>().velocity += dir.normalized * speed;
         //Control limites de pantalla
-        if (transform.position.x < -10)
+        if (transform.position.x < -12)
         {
-            transform.position = new Vector2(-9f, transform.position.y);
+            transform.position = new Vector2(-10f, transform.position.y);
         }
-        if (transform.position.x > 10f)
+        if (transform.position.x > 12f)
         {
-            transform.position = new Vector2(9f, transform.position.y);
+            transform.position = new Vector2(10f, transform.position.y);
         }
 
         //Control de que estemos tocando el suelo
-        if (transform.position.y > -6.10f)
+        if (transform.position.y > -6f)
         {
             grounded = false;
         }
@@ -62,7 +63,21 @@ public class move : MonoBehaviour
                 Instantiate(ranaMuerta, transform.position, Quaternion.identity);
 
             }
+        if (collision.gameObject.name == "ranitaAtrapada"|| collision.gameObject.name == "ranitaAtrapada (1)"|| collision.gameObject.name == "ranitaAtrapada (2)")
+        {
+            Destroy(collision.gameObject);
+            puntos++;
+            if (puntos == 10)
+            {
+                print("Has ganado!!");
+            }
+            else
+            {
+                print(puntos);
+
+            }
         }
+    }
 
        
 }

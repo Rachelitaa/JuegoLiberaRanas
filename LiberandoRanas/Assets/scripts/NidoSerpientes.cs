@@ -5,13 +5,13 @@ using UnityEngine;
 public class NidoSerpientes : MonoBehaviour {
 
     public GameObject serpiente;
-    public int time = 10;
+    public int time = 12;
 
     // Use this for initialization
     void Start()
     {
         //La primera serpiente nace a los 3s y las otras a los 7s
-        InvokeRepeating("Nacer", 3, time);
+         InvokeRepeating("Nacer", 10, time);
     }
 
     void Nacer()

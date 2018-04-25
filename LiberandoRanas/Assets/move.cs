@@ -19,17 +19,17 @@ public class move : MonoBehaviour
 
         GetComponent<Rigidbody2D>().velocity += dir.normalized * speed;
         //Control limites de pantalla
-        if (transform.position.x < -8)
+        if (transform.position.x < -10)
         {
             transform.position = new Vector2(-9f, transform.position.y);
         }
-        if (transform.position.x > 8f)
+        if (transform.position.x > 10f)
         {
             transform.position = new Vector2(9f, transform.position.y);
         }
 
         //Control de que estemos tocando el suelo
-        if (transform.position.y > -6.20f)
+        if (transform.position.y > -6.10f)
         {
             grounded = false;
         }
@@ -39,7 +39,7 @@ public class move : MonoBehaviour
         }
 
         //Tecla Up para saltar
-        if (Input.GetKeyDown(KeyCode.UpArrow)||(Input.GetButtonDown("Jump")) && grounded)
+        if (Input.GetButtonDown("Jump") && grounded)
         {
             GetComponent<Rigidbody2D>().velocity += Vector2.up * alturaSalto;
             GetComponent<Animator>().SetBool("saltando", true);

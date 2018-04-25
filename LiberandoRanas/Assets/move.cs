@@ -18,6 +18,15 @@ public class move : MonoBehaviour
         Vector2 dir = new Vector2(h, 0);
 
         GetComponent<Rigidbody2D>().velocity += dir.normalized * speed;
+        //Control limites de pantalla
+        if (transform.position.x < -8)
+        {
+            transform.position = new Vector2(-9f, transform.position.y);
+        }
+        if (transform.position.x > 8f)
+        {
+            transform.position = new Vector2(9f, transform.position.y);
+        }
 
         //Control de que estemos tocando el suelo
         if (transform.position.y > -6.20f)

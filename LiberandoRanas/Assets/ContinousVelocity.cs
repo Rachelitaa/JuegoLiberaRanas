@@ -11,6 +11,6 @@ public class ContinousVelocity : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(-speed, 0, 0);
+       // transform.Translate(-speed, 0, 0);
     }
 }
